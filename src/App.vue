@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <PreLoader />
+    <HeaderMain />
     <PosterBg :poster="posterBg" />
     <MoviesList :list="moviesList" @changePoster="onChangePoster" />
     <MoviesPagination
@@ -16,6 +18,8 @@ import { mapActions, mapGetters } from 'vuex';
 import MoviesList from './components/MoviesList.vue';
 import PosterBg from './components/PosterBg.vue';
 import MoviesPagination from './components/MoviesPagination.vue';
+import PreLoader from './components/PreLoader.vue';
+import HeaderMain from './components/HeaderMain.vue';
 
 export default {
   name: 'App',
@@ -23,6 +27,8 @@ export default {
     MoviesList,
     PosterBg,
     MoviesPagination,
+    PreLoader,
+    HeaderMain,
   },
   data: () => ({
     posterBg: '',
