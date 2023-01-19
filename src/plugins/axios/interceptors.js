@@ -7,10 +7,12 @@ function setParams(config) {
 
   return config;
 }
+// настройка запроса api с сервера
 
 function returnData(res) {
   return res.data;
 }
+// преображение данных для удобства использования
 
 export default function (axios) {
   axios.interceptors.request.use(setParams);
