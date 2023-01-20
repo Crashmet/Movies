@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <b-toast />
+  </div>
 </template>
 
 <script>

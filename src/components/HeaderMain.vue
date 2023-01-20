@@ -2,7 +2,9 @@
   <header class="header">
     <BNavbar type="dark" class="navbar" variant="dark">
       <BContainer>
-        <BNavbarBrand href="#">I Super MovieDB</BNavbarBrand>
+        <BNavbarBrand href="#">
+          <b-icon icon="film"></b-icon>I Super MovieDB
+        </BNavbarBrand>
         <BNavForm>
           <BFormInput
             class="mr-sm-2 search-input"

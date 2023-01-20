@@ -8,10 +8,17 @@
       </div>
       <div class="movie-item-controls row no-gutters">
         <div class="col pr-2">
-          <BButton size="md" block variant="outline-light">Edit</BButton>
+          <BButton
+            size="md"
+            block
+            variant="outline-light"
+            @click="showInfoModalEvent"
+            >Info</BButton
+          >
         </div>
         <div class="col pl-2">
           <BButton
+            class="movie-item-btn"
             size="md"
             block
             variant="outline-light"
@@ -46,6 +53,10 @@ export default {
         id: this.movie.imdbID,
         title: this.movie.Title,
       });
+    },
+
+    showInfoModalEvent() {
+      this.$emit('showModal', this.movie.imdbID);
     },
   },
 };
@@ -98,5 +109,9 @@ export default {
 .movie-item:hover .movie-info-wrap {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn-md {
+  width: 100%;
 }
 </style>

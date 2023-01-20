@@ -14,7 +14,4 @@ const store = new Vuex.Store({
   modules: { movies, loader, notification },
 });
 
-store.dispatch('initMoviesStore');
-// вызываем метод dispatch из модуля movies для заранее прогрузки данных
-
 export default store;
