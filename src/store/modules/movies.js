@@ -70,7 +70,7 @@ const moviesStore = {
         const movies = serializeResponse(response);
         commit(MOVIES, movies);
       } catch (err) {
-        console.log(err);
+        console.log(err.message);
       } finally {
         // finally срабатываем в любом случае
         dispatch('toggleLoader', false, { root: true });
@@ -110,8 +110,17 @@ const moviesStore = {
 
         const movies = serializeResponse(response.Search);
         commit(MOVIES, movies);
-      } catch (error) {
-        console.log(error.message);
+      } catch (err) {
+        dispatch(
+          'showNotify',
+          {
+            msg: err.message,
+            title: 'Error',
+            variant: 'danger',
+          },
+          { root: true }
+          // при ошибке записываем ее значение в стору для вывода уведомления
+        );
       } finally {
         // finally срабатываем в любом случае
         dispatch('toggleLoader', false, { root: true });

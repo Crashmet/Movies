@@ -8,6 +8,7 @@
             class="mr-sm-2 search-input"
             placeholder="Search"
             v-model="searchValue"
+            @submit.native.prevent="searchValue"
             debounce="500"
           ></BFormInput>
         </BNavForm>
