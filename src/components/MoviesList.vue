@@ -64,7 +64,6 @@ export default {
     },
 
     selectedMovie() {
-      console.log(this.list);
       return this.selectedMovieId ? this.list[this.selectedMovieId] : null;
     },
   },
